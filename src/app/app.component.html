@@ -1,0 +1,7 @@
+<app-header (filterData)="filterData1($event)">
+</app-header>
+<div class="results" *ngIf="data.length>0" style="position:static">
+    <div *ngFor="let item of data | filter : filterObj">
+        <app-item [data]="item"></app-item>
+    </div>
+</div>

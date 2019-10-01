@@ -1,0 +1,120 @@
+<nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse wrapper" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item title">
+                <span style="Color:rgb(7, 126, 180)">ForRent.Com</span>
+
+            </li>
+            <li class="nav-item dropdown link">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Filter
+        </a>
+                <div class="dropdown-menu megamenu" aria-labelledby="navbarDropdown">
+                    <div class="filterBox">
+                        <div class="row filterGroup">
+                            <div class="col-lg-6">
+                                <label class="heading"> pets </label><br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.pets_allowed.DOG">
+                                <label class="filterItem">Dogs</label><br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.pets_allowed.CAT">
+                                <label class="filterItem">Cats</label>
+                                <br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.pets_allowed.ALL">
+                                <label class="filterItem">All</label>
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="heading"> Style </label>
+                                <br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.property_type.APT">
+                                <label class="filterItem">Apartments</label><br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.property_type.CONDO">
+                                <label class="filterItem">Condos</label>
+                                <br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.property_type.HOUSE">
+                                <label class="filterItem">Houses</label>
+                                <br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.property_type.TOWNHOME">
+                                <label class="filterItem">TownHomes</label>
+                            </div>
+                        </div>
+                        <div class="row filterGroup">
+                            <div class="col-lg-6">
+                                <label class="heading"> Laundry </label><br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.laundry.IN_UNIT">
+                                <label class="filterItem"> In Unit </label><br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.laundry.HOOKUP">
+                                <label class="filterItem">Hookups</label>
+                                <br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.laundry.ON_SITE">
+                                <label class="filterItem">On Site</label>
+                            </div>
+                        </div>
+                        <label class="heading"> Interior & Community Amenities </label>
+                        <div class="row filterGroup">
+
+                            <div class="col-lg-3">
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.airCond">
+                                <label class="filterItem"> Air Conditioning </label><br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.furnished">
+                                <label class="filterItem">Furnished Available</label>
+                                <br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.balcony">
+                                <label class="filterItem">Patio or Balcony </label><br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.utilities">
+                                <label class="filterItem">Utilities Included </label>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.cabel">
+                                <label class="filterItem"> Cabel or Satelite </label><br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.fireplace">
+                                <label class="filterItem">Fireplace</label>
+                                <br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.Garages">
+                                <label class="filterItem">Garages</label>
+                                <br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.Pool">
+                                <label class="filterItem">Pool</label>
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.Diability">
+                                <label class="filterItem"> Diability Access </label><br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.Fitness">
+                                <label class="filterItem">Fitness Center</label>
+                                <br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.Hardwood">
+                                <label class="filterItem">Hardwood Floors</label>
+                                <br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.interior.Walk">
+                                <label class="filterItem">Walk-in-Closets</label>
+                            </div>
+                        </div>
+                        <div class="row filterGroup">
+                            <div class="col-lg-6">
+                                <label class="heading"> Specialties </label><br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.speciality.income">
+                                <label class="filterItem"> Income restricted </label><br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.speciality.luxury">
+                                <label class="filterItem">Luxury</label>
+                                <br>
+                                <input type="checkbox" class="checkbox" [(ngModel)]="checkBoxControl.speciality.short">
+                                <label class="filterItem">Short Term Lease</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterFooter">
+                        <button class="btn btn-primary" style="float:right" (click)="clear()"> clear </button>
+                        <button class="btn btn-primary" (click)="done()"> done </button>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+</nav>

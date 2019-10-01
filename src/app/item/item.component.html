@@ -1,0 +1,27 @@
+<div class="item" *ngIf="data != ''">
+    <div class="carousel">
+        <app-carousel [images]="data.property_images"></app-carousel>
+    </div>
+    <div class="content">
+        <div class="lastUpdated">
+            <i class="fa fa-refresh" aria-hidden="true"></i> {{getDateDiff(data.property_postDate)}} Days Ago
+        </div>
+        <div class="heading">
+            {{ data.landlord_name }} &nbsp;
+        </div>
+        <div class="title">
+            {{ data.address }}
+        </div>
+        <div class="beds-price">
+            {{data.beds}} &nbsp; | &nbsp; {{data.price | currency:'USD'}}
+        </div>
+        <div class="row" style="margin-top:10px;">
+            <div class="col-lg-6 col-md-12">
+                <button class="btn btn-primary">Email Property</button>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <button class="btn btn-primary">{{data.phoneNumber?data.phoneNumber:"Phone Number"}}</button>
+            </div>
+        </div>
+    </div>
+</div>
